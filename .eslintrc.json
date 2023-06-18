@@ -1,0 +1,28 @@
+{
+  "env": {
+    "browser": false,
+    "node": true,
+    "es2021": true
+  },
+  "extends": "eslint:recommended",
+  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "rules": {
+    "prefer-const": "error",
+    "eqeqeq": "error",
+    "quotes": [
+      "error",
+      "double",
+      {
+        "allowTemplateLiterals": true
+      }
+    ],
+    "space-before-function-paren": "off",
+    "yoda": "error",
+    "semi": "error",
+    "no-var": "error",
+    "no-unused-vars": "warn"
+  }
+}
