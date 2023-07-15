@@ -37,17 +37,11 @@
   "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DragonOsman/personal-library.git"
+    "url": ""
   },
   "keywords": [
-    "mern",
-    "mern-app",
-    "library"
+   ""
   ],
-  "author": "Osman Zakir",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DragonOsman/personal-library/issues"
-  },
-  "homepage": "https://github.com/DragonOsman/personal-library#readme"
+  "author": "Pypro001(Vivek Maurya)",
+  "license": "ISC"
 }
