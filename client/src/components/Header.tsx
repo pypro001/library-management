@@ -51,7 +51,7 @@ const Header = () => {
               ) : (
                 <>
                   <li className="nav-item">
-                    Profile {/* Todo: create user profile page and add link here */}
+                    Profile {}
                   </li>
                   <li className="nav-link">
                     <button type="button" onClick={async e => {
