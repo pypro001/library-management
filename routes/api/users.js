@@ -14,9 +14,7 @@ const {
   verifyUser
  } = require("../../authenticate");
 
-// @route POST api/users/register
-// @desc Register user
-// @access Public
+
 userRouter.post("/register", async (req, res, next) => {
   const { errors, isValid } = validateRegisterInput(req.body);
 
@@ -57,9 +55,7 @@ userRouter.post("/register", async (req, res, next) => {
   }
 });
 
-// @route POST api/users/login
-// @desc Login user and return JWT token
-// @access Public
+
 userRouter.post("/login", passport.authenticate("local"), async (req, res, next) => {
   const { errors, isValid } = validateLoginInput(req.body);
 
@@ -88,9 +84,7 @@ userRouter.post("/login", passport.authenticate("local"), async (req, res, next)
   }
 });
 
-// @route POST api/users/refreshToken
-// @desc Refresh JWT and allow user to access protected routes
-// @access Public
+
 userRouter.post("/refreshToken", async (req, res, next) => {
   console.log(`/refreshToken route, req.cookies: ${req.cookies}`);
   const { signedCookies = {} } = req;
@@ -139,16 +133,12 @@ userRouter.post("/refreshToken", async (req, res, next) => {
   }
 });
 
-// @route GET api/users/user-info
-// @desc Send user details
-// @access Public
+
 userRouter.get("/user-info/", verifyUser, (req, res, next) => {
   res.send({ user: req.user, isLoggedIn: true });
 });
 
-// @route GET api/users/logout
-// @desc Log user out
-// @access Public
+
 userRouter.get("/logout", verifyUser, async (req, res, next) => {
   console.log(`/logout route, req.cookies: ${req.cookies}`);
   const { signedCookies = {} } = req;
